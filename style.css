@@ -1,0 +1,286 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and borders don't affect the width */
+}
+
+/* Ensure the body and html are full height */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Wrapper for content to ensure footer stays at bottom */
+body {
+  display: flex;
+  flex-direction: column; /* Stacks children vertically */
+  min-height: 100vh; /* Ensures the body always takes at least the full height of the screen */
+}
+
+/* Header (navbar) */
+header {
+  background-color: #333; /* Set a background color for visibility */
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Makes space for the navbar */
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-left: auto; /* Pushes the nav to the right */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.active {
+  color: #FFD700; /* Active page color */
+}
+
+/* Full-width sections */
+main {
+  flex-grow: 1; /* This allows the content area to expand and push the footer to the bottom */
+  padding: 20px;
+}
+
+section {
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;  /* Navy Blue */
+  color: #fff;  /* White text */
+  width: 100%;
+}
+
+
+/* Projects Section */
+#projects {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Projects Section */
+#projects {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Projects Container (Grid Layout) */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns per row */
+  gap: 40px; /* Space between grid items, 40px apart */
+  justify-items: center; /* Centers the items inside the grid cells */
+  width: 80%; /* Ensure the container takes full width */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 20px; /* Optional: Adds some padding around the container */
+}
+
+/* Project Card (Fixed Size) */
+.project-card {
+  background-color: #1e2a47ec; /* Dark blue background */
+  border: 2px solid #fff; /* White border */
+  padding: 20px; /* Increased padding for better spacing */
+  border-radius: 10px;
+  width: 350px; /* Fixed width for the card */
+  height: 550px; /* Fixed height for the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Aligns content to the top of the card */
+  align-items: center;
+  transition: transform 0.3s ease;
+  color: #fff; /* White text inside the card */
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Slight hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow on hover */
+}
+
+
+.project-card img {
+  width: 100%; /* Makes image fit within the card */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px;
+  margin-bottom: 15px; /* Adds space between the image and description */
+}
+
+/* Project Description (With Same Width as Card and Dynamic Scaling) */
+.project-description {
+  background-color: #ffffff; /* Light background for description */
+  padding: 15px;
+  margin-top: 5px;
+  font-size: 1.1em;
+  color: #000000;
+  text-align: center;
+  border-radius: 8px; /* Rounded corners for the description box */
+  width: 100%; /* Ensures description box matches the width of the card */
+  margin-bottom: 5px; /* Keeps a 5px gap from the bottom of the card */
+  flex-grow: 1; /* Allows description box to grow dynamically */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-center; /* Ensures content is aligned at the bottom */
+}
+
+/* Headings in Description */
+.project-description h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Paragraph in Description */
+.project-description p {
+  font-size: 1em;
+  line-height: 1.4;
+  color: #000000; /* Dark text for description */
+}
+
+/* LinkedIn  */
+.linkedin-link {
+  color: #0077b5; /* LinkedIn brand color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2em; /* Optional: adjust the font size */
+}
+
+.linkedin-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Form Contact Me */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#contact-section {
+  padding: 40px;
+  text-align: center;
+  background-color: #f5f5f5; /* Light background */
+}
+
+#contact-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.contact-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  padding: 20px;
+  gap: 20px; /* Space between form and image */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#contact-section {
+  padding: 40px;
+  text-align: center;
+  background-color: #f5f5f5; /* Light background */
+}
+
+#contact-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  flex: 1; /* Takes up half the panel */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.contact-form textarea {
+  resize: none; /* Prevents resizing of the textarea */
+  height: 120px;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: none;
+  background-color: #007BFF; /* Blue button */
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Image Styling */
+.contact-image {
+  flex: 1; /* Takes up the other half */
+  text-align: center;
+}
+
+.contact-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+

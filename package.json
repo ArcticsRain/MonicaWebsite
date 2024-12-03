@@ -1,0 +1,14 @@
+{
+    "name": "portfoliowebsite",
+    "version": "1.0.0",
+    "description": "Website about all my Info and projects.",
+    "scripts": {
+        "start": "echo 'No start script needed'"
+      },
+      "dependencies": {
+      },
+      "devDependencies": {
+      },
+      "author": "Your Name",
+      "license": "MIT"
+    }
