@@ -1,11 +1,13 @@
-/* General Reset */
+/* --------------------------- */
+/* RESET + GLOBAL STYLES       */
+/* --------------------------- */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 html, body {
   height: 100%;
   width: 100%;
@@ -16,12 +18,16 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: #bfccdd8c; /* soft neutral background */
 }
 
-/* Header (Navbar) */
+
+/* --------------------------- */
+/* NAVBAR                      */
+/* --------------------------- */
+
 header {
-  background-color: #0b022b;
+  background: linear-gradient(to bottom, #0b022b, #11225a91);
   color: #fff;
   padding: 15px 20px;
   display: flex;
@@ -32,12 +38,10 @@ header {
 
 header h1 {
   font-size: 1.5em;
-  margin-bottom: 10px;
 }
 
 nav {
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -58,60 +62,61 @@ nav a.active {
   color: #333;
 }
 
-/* Main Content */
+
+/* --------------------------- */
+/* SECTION LAYOUT (FULL WIDTH) */
+/* --------------------------- */
+
 main {
   flex-grow: 1;
-  padding: 20px;
 }
 
 section {
-  padding: 40px 20px;
+  width: 100%;
+  padding: 60px 5vw;
   text-align: center;
-  background-color: #73bee05b;
-  border-radius: 10px;
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
+  background: none;
+  margin-bottom: 60px;
 }
 
 section h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #0b022b;
 }
 
-/* Project Cards */
+
+/* --------------------------- */
+/* PROJECT CARDS               */
+/* --------------------------- */
+
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .project-card {
-  background-color: #1e2a47ec;
+  background-color: #1e2a47;
   border: 2px solid #fff;
   padding: 15px;
   border-radius: 10px;
-  width: 100%;
-  max-width: 350px;
-  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
 .project-card img {
   width: 100%;
-  height: auto;
   border-radius: 8px;
   margin-bottom: 15px;
 }
@@ -122,10 +127,137 @@ section h2 {
   border-radius: 8px;
   width: 100%;
   color: #000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+
+/* --------------------------- */
+/* ARCHVIZ BANNER GALLERY      */
+/* --------------------------- */
+
+.banner-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  width: 100%;
+}
+
+.banner-card {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation */
+.banner-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+}
+
+/* Dark overlay */
+.banner-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(0,0,0,0) 30%,
+    rgba(0,0,0,0.45));
+  pointer-events: none;
+}
+
+.banner-title {
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+
+
+
+
+/* --------------------------- */
+/* FULL-WIDTH ARCHVIZ BANNER   */
+/* --------------------------- */
+
+.archviz-full-banner {
+  width: 100vw;                 /* full viewport width */
+  height: 600px;
+  background-image: url('images/banner.png');
+  background-size: cover;
+  background-position: center;
+  margin-left: calc(50% - 50vw); /* trick: removes body padding to make full-width */
+  margin-right: calc(50% - 50vw);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 40px;
+}
+
+/* Dark overlay for readability */
+.archviz-full-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0.6)
+  );
+}
+
+.archviz-banner-title {
+  position: relative;
+  z-index: 2;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 700;
+}
+
+/* Small gallery grid stays same */
+.archviz-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.archviz-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease;
+}
+
+.archviz-item:hover {
+  transform: translateY(-8px);
+}
+
+.archviz-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.archviz-item p {
+  padding: 15px;
+  color: #000a27;
+  font-weight: 600;
+}
+
+/* --------------------------- */
+/* FOOTER                      */
+/* --------------------------- */
+
 footer {
   text-align: center;
   padding: 20px;
@@ -134,85 +266,43 @@ footer {
   font-size: 0.9em;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  nav {
-    justify-content: center;
-  }
-
-  section h2 {
-    font-size: 1.8em;
-  }
-}
-
-@media (max-width: 480px) {
-  nav a {
-    font-size: 0.9em;
-    padding: 6px 10px;
-  }
-
-  section h2 {
-    font-size: 1.5em;
-  }
-
-  .project-card {
-    padding: 10px;
-  }
-
-  .project-description {
-    font-size: 0.9em;
-  }
-}
-
+/* --------------------------- */
+/* CONTACT FORM (unchanged)    */
+/* --------------------------- */
 
 #contact-section {
-  padding: 40px;
+  padding: 60px 20px;
   text-align: center;
-  background-color: #73bee05b;; /* Light background */
-}
-
-#contact-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.contact-panel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  background-color: #ffffff;
+  background: linear-gradient(to bottom, #d18c53, #1a194d65);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 800px;
-  padding: 20px;
-  gap: 20px; /* Space between form and image */
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-#contact-section {
-  padding: 40px;
-  text-align: center;
-  background-color: #73bee05b; /* Light background */
+  max-width: 1200px;   /* Same scale as other sections */
+  margin: 40px auto;
 }
 
 #contact-section h2 {
   font-size: 2.5em;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
+/* Centered white form panel */
+.contact-panel {
+  width: 100%;
+  max-width: 600px;   /* Perfect centered size */
+  margin: 0 auto;
+
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form styling */
 .contact-form {
-  flex: 1; /* Takes up half the panel */
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -221,51 +311,111 @@ body {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 1em;
 }
 
 .contact-form textarea {
-  resize: none; /* Prevents resizing of the textarea */
-  height: 120px;
+  height: 130px;
+  resize: none;
 }
 
 .contact-form button {
-  padding: 10px;
+  padding: 12px;
   border: none;
-  background-color: #007BFF; /* Blue button */
-  color: #fff;
-  border-radius: 5px;
-  font-size: 1em;
+  background-color: #122133;
+  color: white;
+  border-radius: 6px;
+  font-size: 1.1em;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .contact-form button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #1e3a5f;
 }
 
-/* Image Styling */
-.contact-image {
-  flex: 1; /* Takes up the other half */
-  text-align: center;
+/* Make it look proper on mobile */
+@media (max-width: 600px) {
+  #contact-section h2 {
+    font-size: 2em;
+  }
+
+  .contact-panel {
+    padding: 20px;
+  }
+}
+/* --------------------------- */
+/* FULL-WIDTH PROJECTS BANNER  */
+/* --------------------------- */
+
+.projects-full-banner {
+  width: 100vw;
+  height: 600px;
+  background-image: url('images/BugVoyage.jpg'); /* change to your preferred hero */
+  background-size: cover;
+  background-position: center;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 40px;
 }
 
-.contact-image img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-
-
-/* Banner styling */
-.banner {
+.projects-full-banner::after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 00px; /* Adjust height as needed */
-  background-color: #4CAF50; /* Choose your desired banner color */
-  z-index: -1; /* Ensure it stays behind content */
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0.55)
+  );
 }
+
+.projects-banner-title {
+  position: relative;
+  z-index: 1;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: white;
+}
+
+
+
+/* --------------------------- */
+/* RESPONSIVE FIXES            */
+/* --------------------------- */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .banner-card {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    padding: 6px 10px;
+    font-size: 0.9em;
+  }
+
+  .banner-card {
+    height: 280px;
+  }
+}
+
+
