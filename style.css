@@ -76,20 +76,27 @@ main {
 /* =========================== */
 
 .hero {
-  min-height: 60vh;
+  min-height: 80vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   text-align: center;
   padding: 80px 6vw 60px;
   color: white;
 
-  background: linear-gradient(
-    to bottom right,
-    rgba(11, 2, 43, 0.95),
-    rgba(30, 42, 71, 0.95)
-  );
+  background-image:
+    linear-gradient(
+      to bottom right,
+      rgba(11, 2, 43, 0.75),
+      rgba(30, 42, 71, 0.85)
+    ),
+    url("/MonicaWebsite/images/HeroB.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 
 .hero-content {
   max-width: 900px;
