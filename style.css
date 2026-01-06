@@ -90,13 +90,12 @@ main {
       rgba(11, 2, 43, 0.75),
       rgba(30, 42, 71, 0.85)
     ),
-    url("/MonicaWebsite/images/HeroB.jpeg");
+    url("images/HeroB.jpeg");
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 .hero-content {
   max-width: 900px;
