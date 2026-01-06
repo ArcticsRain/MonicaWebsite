@@ -30,6 +30,7 @@ header {
   background: linear-gradient(to bottom, #0b022b, #11225a91);
   color: #fff;
   padding: 15px 20px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -361,4 +362,25 @@ footer {
   nav a {
     font-size: 0.9rem;
   }
+}
+
+/* --------------------------- */
+/* SPACING FIXES               */
+/* --------------------------- */
+
+header {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+main > .hero {
+  padding-top: 40px;
+}
+
+main > section:first-child {
+  padding-top: 40px;
+}
+
+section h2 {
+  margin-top: 20px;
 }
