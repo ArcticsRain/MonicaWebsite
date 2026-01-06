@@ -106,14 +106,12 @@ main {
   margin-bottom: 20px;
   color: #9fd3ea;
 }
-
-.hero p {
+.hero .hero-content p {
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 30px;
-  color: #e6f2f8; /* soft light blue-white */
+  color: #e6f2f8;
 }
-
 .hero-buttons {
   display: flex;
   gap: 20px;
