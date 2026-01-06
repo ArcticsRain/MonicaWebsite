@@ -15,7 +15,7 @@ html, body {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #bfccdd8c;
+  background-color: #3e6ca88c;
   display: flex;
   flex-direction: column;
 }
@@ -390,7 +390,7 @@ section a {
   background: #1a194d65;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 6px 16px #70bde0;
+  box-shadow: 0 6px 16px #6b93c7;
 }
 
 .contact-form {
