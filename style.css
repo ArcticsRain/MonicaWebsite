@@ -322,6 +322,12 @@ section a {
   display: block;
 }
 
+.archviz-item p {
+  padding: 14px 16px;
+  font-weight: 600;
+  color: #000a27;
+  background: white;
+}
 
 /* =========================== */
 /* FOOTER                      */
@@ -359,4 +365,60 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
   }
+}
+
+/* =========================== */
+/* CONTACT FORM               */
+/* =========================== */
+
+#contact-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #d18c53, #1a194d65);
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.contact-panel {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 130px;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #122133;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #1e3a5f;
 }
