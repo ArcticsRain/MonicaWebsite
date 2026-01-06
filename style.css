@@ -277,7 +277,7 @@ section a {
 
 .project-btn {
   padding: 14px 30px;
-  background-color: #73bde0;
+  background-color: #70bde0;
   color: #0b022b;
   text-decoration: none;
   font-weight: 600;
@@ -377,7 +377,7 @@ section a {
 #contact-section {
   padding: 60px 20px;
   text-align: center;
-  background: linear-gradient(to bottom, #d18c53, #1a194d65);
+  background: linear-gradient(to bottom, #70bde0, #1a194d65);
   border-radius: 10px;
   max-width: 1200px;
   margin: 40px auto;
