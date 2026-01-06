@@ -461,11 +461,3 @@ footer {
   transform: scale(1.05);
   background-color: #9fd3ea;
 }
-.project-card img {
-  transition: transform 0.4s ease;
-}
-
-.project-card:hover img {
-  transform: scale(1.05);
-}
-
