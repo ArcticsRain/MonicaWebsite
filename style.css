@@ -374,13 +374,18 @@ section a {
 /* CONTACT FORM                */
 /* =========================== */
 
+
 #contact-section {
   padding: 60px 20px;
   text-align: center;
-  background: linear-gradient(to bottom, #70bde0, #ffffff65);
+  background: linear-gradient(to bottom, #1f1e41, #1d478f61);
   border-radius: 10px;
   max-width: 1200px;
   margin: 40px auto;
+}
+
+#contact-section h2 {
+  color: white;
 }
 
 .contact-panel {
