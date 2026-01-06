@@ -419,4 +419,53 @@ footer {
   }
 }
 
+/* --------------------------- */
+/* PROJECT CARD HOVER LINK     */
+/* --------------------------- */
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark hover overlay */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 2, 43, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show overlay on hover */
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/* Button */
+.project-btn {
+  padding: 14px 28px;
+  background-color: #73bde0;
+  color: #0b022b;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.project-btn:hover {
+  transform: scale(1.05);
+  background-color: #9fd3ea;
+}
+.project-card img {
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
 
