@@ -33,17 +33,19 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
   font-size: 1.4rem;
 }
-
 nav {
   display: flex;
   gap: 10px;
 }
-
 nav a {
   color: white;
   text-decoration: none;
