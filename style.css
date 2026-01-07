@@ -304,11 +304,11 @@ section a {
 }
 
 .projects-full-banner {
-  background-image: url("images/SpaceRangerRibbet.jpg");
+  background-image: url("images/BugVoyage.jpg");
 }
 
 .archviz-full-banner {
-  background-image: url("images/PP.png");
+  background-image: url("images/codeBanner.png");
 }
 
 .projects-full-banner::after,
