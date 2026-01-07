@@ -292,7 +292,7 @@ section a {
 .projects-full-banner,
 .archviz-full-banner {
   width: 100vw;
-  height: 800px;
+  height: 600px;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   background-size: cover;
